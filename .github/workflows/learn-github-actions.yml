@@ -13,3 +13,9 @@ jobs:
         uses: azure/login@v1
         with:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      
+      - name: Azure PowerShell Action
+        uses: Azure/powershell@v1
+        with:
+          inlineScript: Get-AzResourceGroup -Name "A838492_adamczyz"
+          azPSVersion: "latest"
